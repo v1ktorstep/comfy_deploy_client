@@ -562,13 +562,13 @@ mixin _$RunOutputResult {
   @JsonKey(name: 'status')
   RunStatus get status => throw _privateConstructorUsedError;
   @JsonKey(name: 'ended_at')
-  String? get endedAt => throw _privateConstructorUsedError;
+  DateTime? get endedAt => throw _privateConstructorUsedError;
   @JsonKey(name: 'created_at')
-  String get createdAt => throw _privateConstructorUsedError;
+  DateTime get createdAt => throw _privateConstructorUsedError;
   @JsonKey(name: 'queued_at')
-  String? get queuedAt => throw _privateConstructorUsedError;
+  DateTime? get queuedAt => throw _privateConstructorUsedError;
   @JsonKey(name: 'started_at')
-  String? get startedAt => throw _privateConstructorUsedError;
+  DateTime? get startedAt => throw _privateConstructorUsedError;
   @JsonKey(name: 'gpu')
   String? get gpu => throw _privateConstructorUsedError;
   @JsonKey(name: 'machine_version')
@@ -616,10 +616,10 @@ abstract class $RunOutputResultCopyWith<$Res> {
       @JsonKey(name: 'machine_id') String? machineId,
       @JsonKey(name: 'origin') String origin,
       @JsonKey(name: 'status') RunStatus status,
-      @JsonKey(name: 'ended_at') String? endedAt,
-      @JsonKey(name: 'created_at') String createdAt,
-      @JsonKey(name: 'queued_at') String? queuedAt,
-      @JsonKey(name: 'started_at') String? startedAt,
+      @JsonKey(name: 'ended_at') DateTime? endedAt,
+      @JsonKey(name: 'created_at') DateTime createdAt,
+      @JsonKey(name: 'queued_at') DateTime? queuedAt,
+      @JsonKey(name: 'started_at') DateTime? startedAt,
       @JsonKey(name: 'gpu') String? gpu,
       @JsonKey(name: 'machine_version') String? machineVersion,
       @JsonKey(name: 'machine_type') String? machineType,
@@ -705,19 +705,19 @@ class _$RunOutputResultCopyWithImpl<$Res, $Val extends RunOutputResult>
       endedAt: freezed == endedAt
           ? _value.endedAt
           : endedAt // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as DateTime?,
       createdAt: null == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
-              as String,
+              as DateTime,
       queuedAt: freezed == queuedAt
           ? _value.queuedAt
           : queuedAt // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as DateTime?,
       startedAt: freezed == startedAt
           ? _value.startedAt
           : startedAt // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as DateTime?,
       gpu: freezed == gpu
           ? _value.gpu
           : gpu // ignore: cast_nullable_to_non_nullable
@@ -790,10 +790,10 @@ abstract class _$$RunOutputResultImplCopyWith<$Res>
       @JsonKey(name: 'machine_id') String? machineId,
       @JsonKey(name: 'origin') String origin,
       @JsonKey(name: 'status') RunStatus status,
-      @JsonKey(name: 'ended_at') String? endedAt,
-      @JsonKey(name: 'created_at') String createdAt,
-      @JsonKey(name: 'queued_at') String? queuedAt,
-      @JsonKey(name: 'started_at') String? startedAt,
+      @JsonKey(name: 'ended_at') DateTime? endedAt,
+      @JsonKey(name: 'created_at') DateTime createdAt,
+      @JsonKey(name: 'queued_at') DateTime? queuedAt,
+      @JsonKey(name: 'started_at') DateTime? startedAt,
       @JsonKey(name: 'gpu') String? gpu,
       @JsonKey(name: 'machine_version') String? machineVersion,
       @JsonKey(name: 'machine_type') String? machineType,
@@ -877,19 +877,19 @@ class __$$RunOutputResultImplCopyWithImpl<$Res>
       freezed == endedAt
           ? _value.endedAt
           : endedAt // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as DateTime?,
       null == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
-              as String,
+              as DateTime,
       freezed == queuedAt
           ? _value.queuedAt
           : queuedAt // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as DateTime?,
       freezed == startedAt
           ? _value.startedAt
           : startedAt // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as DateTime?,
       freezed == gpu
           ? _value.gpu
           : gpu // ignore: cast_nullable_to_non_nullable
@@ -1011,16 +1011,16 @@ class _$RunOutputResultImpl implements _RunOutputResult {
   final RunStatus status;
   @override
   @JsonKey(name: 'ended_at')
-  final String? endedAt;
+  final DateTime? endedAt;
   @override
   @JsonKey(name: 'created_at')
-  final String createdAt;
+  final DateTime createdAt;
   @override
   @JsonKey(name: 'queued_at')
-  final String? queuedAt;
+  final DateTime? queuedAt;
   @override
   @JsonKey(name: 'started_at')
-  final String? startedAt;
+  final DateTime? startedAt;
   @override
   @JsonKey(name: 'gpu')
   final String? gpu;
@@ -1179,10 +1179,10 @@ abstract class _RunOutputResult implements RunOutputResult {
           @JsonKey(name: 'machine_id') final String? machineId,
           @JsonKey(name: 'origin') final String origin,
           @JsonKey(name: 'status') final RunStatus status,
-          @JsonKey(name: 'ended_at') final String? endedAt,
-          @JsonKey(name: 'created_at') final String createdAt,
-          @JsonKey(name: 'queued_at') final String? queuedAt,
-          @JsonKey(name: 'started_at') final String? startedAt,
+          @JsonKey(name: 'ended_at') final DateTime? endedAt,
+          @JsonKey(name: 'created_at') final DateTime createdAt,
+          @JsonKey(name: 'queued_at') final DateTime? queuedAt,
+          @JsonKey(name: 'started_at') final DateTime? startedAt,
           @JsonKey(name: 'gpu') final String? gpu,
           @JsonKey(name: 'machine_version') final String? machineVersion,
           @JsonKey(name: 'machine_type') final String? machineType,
@@ -1225,16 +1225,16 @@ abstract class _RunOutputResult implements RunOutputResult {
   RunStatus get status;
   @override
   @JsonKey(name: 'ended_at')
-  String? get endedAt;
+  DateTime? get endedAt;
   @override
   @JsonKey(name: 'created_at')
-  String get createdAt;
+  DateTime get createdAt;
   @override
   @JsonKey(name: 'queued_at')
-  String? get queuedAt;
+  DateTime? get queuedAt;
   @override
   @JsonKey(name: 'started_at')
-  String? get startedAt;
+  DateTime? get startedAt;
   @override
   @JsonKey(name: 'gpu')
   String? get gpu;

@@ -65,10 +65,16 @@ _$RunOutputResultImpl _$$RunOutputResultImplFromJson(
       json['machine_id'] as String?,
       json['origin'] as String,
       $enumDecode(_$RunStatusEnumMap, json['status']),
-      json['ended_at'] as String?,
-      json['created_at'] as String,
-      json['queued_at'] as String?,
-      json['started_at'] as String?,
+      json['ended_at'] == null
+          ? null
+          : DateTime.parse(json['ended_at'] as String),
+      DateTime.parse(json['created_at'] as String),
+      json['queued_at'] == null
+          ? null
+          : DateTime.parse(json['queued_at'] as String),
+      json['started_at'] == null
+          ? null
+          : DateTime.parse(json['started_at'] as String),
       json['gpu'] as String?,
       json['machine_version'] as String?,
       json['machine_type'] as String?,
@@ -98,10 +104,10 @@ Map<String, dynamic> _$$RunOutputResultImplToJson(
       'machine_id': instance.machineId,
       'origin': instance.origin,
       'status': _$RunStatusEnumMap[instance.status]!,
-      'ended_at': instance.endedAt,
-      'created_at': instance.createdAt,
-      'queued_at': instance.queuedAt,
-      'started_at': instance.startedAt,
+      'ended_at': instance.endedAt?.toIso8601String(),
+      'created_at': instance.createdAt.toIso8601String(),
+      'queued_at': instance.queuedAt?.toIso8601String(),
+      'started_at': instance.startedAt?.toIso8601String(),
       'gpu': instance.gpu,
       'machine_version': instance.machineVersion,
       'machine_type': instance.machineType,
