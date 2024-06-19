@@ -154,3 +154,15 @@ Map<String, dynamic> _$$RunLogImplToJson(_$RunLogImpl instance) =>
       'logs': instance.logs,
       'timestamp': instance.timestamp,
     };
+
+_$WebsocketResultImpl _$$WebsocketResultImplFromJson(
+        Map<String, dynamic> json) =>
+    _$WebsocketResultImpl(
+      wsConnectionUrl: json['ws_connection_url'] as String,
+    );
+
+Map<String, dynamic> _$$WebsocketResultImplToJson(
+        _$WebsocketResultImpl instance) =>
+    <String, dynamic>{
+      'ws_connection_url': instance.wsConnectionUrl,
+    };

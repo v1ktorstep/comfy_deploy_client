@@ -2,6 +2,7 @@ library comfy_deploy_client;
 
 import 'package:comfy_deploy_client/types.dart';
 import 'package:dio/dio.dart';
+import 'package:retrofit/http.dart';
 import 'package:retrofit/retrofit.dart';
 
 part 'comfy_deploy_client.g.dart';
@@ -33,5 +34,10 @@ abstract class ComfyDeployClient {
   @GET('/run')
   Future<RunOutputResult> getRun({
     @Query('run_id') required String runId,
+  });
+
+  @GET('/websocket/{deploymentId}')
+  Future<WebsocketResult> getWebsocket({
+    @Path() required String deploymentId,
   });
 }

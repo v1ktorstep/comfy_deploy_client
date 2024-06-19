@@ -1589,3 +1589,147 @@ abstract class _RunLog implements RunLog {
   _$$RunLogImplCopyWith<_$RunLogImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
+
+WebsocketResult _$WebsocketResultFromJson(Map<String, dynamic> json) {
+  return _WebsocketResult.fromJson(json);
+}
+
+/// @nodoc
+mixin _$WebsocketResult {
+  @JsonKey(name: 'ws_connection_url')
+  String get wsConnectionUrl => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $WebsocketResultCopyWith<WebsocketResult> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $WebsocketResultCopyWith<$Res> {
+  factory $WebsocketResultCopyWith(
+          WebsocketResult value, $Res Function(WebsocketResult) then) =
+      _$WebsocketResultCopyWithImpl<$Res, WebsocketResult>;
+  @useResult
+  $Res call({@JsonKey(name: 'ws_connection_url') String wsConnectionUrl});
+}
+
+/// @nodoc
+class _$WebsocketResultCopyWithImpl<$Res, $Val extends WebsocketResult>
+    implements $WebsocketResultCopyWith<$Res> {
+  _$WebsocketResultCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? wsConnectionUrl = null,
+  }) {
+    return _then(_value.copyWith(
+      wsConnectionUrl: null == wsConnectionUrl
+          ? _value.wsConnectionUrl
+          : wsConnectionUrl // ignore: cast_nullable_to_non_nullable
+              as String,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$WebsocketResultImplCopyWith<$Res>
+    implements $WebsocketResultCopyWith<$Res> {
+  factory _$$WebsocketResultImplCopyWith(_$WebsocketResultImpl value,
+          $Res Function(_$WebsocketResultImpl) then) =
+      __$$WebsocketResultImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({@JsonKey(name: 'ws_connection_url') String wsConnectionUrl});
+}
+
+/// @nodoc
+class __$$WebsocketResultImplCopyWithImpl<$Res>
+    extends _$WebsocketResultCopyWithImpl<$Res, _$WebsocketResultImpl>
+    implements _$$WebsocketResultImplCopyWith<$Res> {
+  __$$WebsocketResultImplCopyWithImpl(
+      _$WebsocketResultImpl _value, $Res Function(_$WebsocketResultImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? wsConnectionUrl = null,
+  }) {
+    return _then(_$WebsocketResultImpl(
+      wsConnectionUrl: null == wsConnectionUrl
+          ? _value.wsConnectionUrl
+          : wsConnectionUrl // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$WebsocketResultImpl implements _WebsocketResult {
+  const _$WebsocketResultImpl(
+      {@JsonKey(name: 'ws_connection_url') required this.wsConnectionUrl});
+
+  factory _$WebsocketResultImpl.fromJson(Map<String, dynamic> json) =>
+      _$$WebsocketResultImplFromJson(json);
+
+  @override
+  @JsonKey(name: 'ws_connection_url')
+  final String wsConnectionUrl;
+
+  @override
+  String toString() {
+    return 'WebsocketResult(wsConnectionUrl: $wsConnectionUrl)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$WebsocketResultImpl &&
+            (identical(other.wsConnectionUrl, wsConnectionUrl) ||
+                other.wsConnectionUrl == wsConnectionUrl));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, wsConnectionUrl);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$WebsocketResultImplCopyWith<_$WebsocketResultImpl> get copyWith =>
+      __$$WebsocketResultImplCopyWithImpl<_$WebsocketResultImpl>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$WebsocketResultImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _WebsocketResult implements WebsocketResult {
+  const factory _WebsocketResult(
+      {@JsonKey(name: 'ws_connection_url')
+      required final String wsConnectionUrl}) = _$WebsocketResultImpl;
+
+  factory _WebsocketResult.fromJson(Map<String, dynamic> json) =
+      _$WebsocketResultImpl.fromJson;
+
+  @override
+  @JsonKey(name: 'ws_connection_url')
+  String get wsConnectionUrl;
+  @override
+  @JsonKey(ignore: true)
+  _$$WebsocketResultImplCopyWith<_$WebsocketResultImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}

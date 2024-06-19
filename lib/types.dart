@@ -102,3 +102,13 @@ class RunLog with _$RunLog {
 
   factory RunLog.fromJson(Map<String, dynamic> json) => _$RunLogFromJson(json);
 }
+
+@freezed
+class WebsocketResult with _$WebsocketResult {
+  const factory WebsocketResult({
+    @JsonKey(name: 'ws_connection_url') required String wsConnectionUrl,
+  }) = _WebsocketResult;
+
+  factory WebsocketResult.fromJson(Map<String, dynamic> json) =>
+      _$WebsocketResultFromJson(json);
+}
